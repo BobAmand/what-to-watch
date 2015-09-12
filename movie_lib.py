@@ -2,16 +2,16 @@
 # This will contain my classes
 #
 class User:
-    def __init__(self, uid):
-        self.userid = uid
+    def __init__(self, user_id):
+        self.uid = user_id
 
-class Movie(User):
-    def __init__(self, movieid, uid):
-        self.movieid = movieid
-        self.userid = uid
+class Movie:
+    def __init__(self, movie_id, title):
+        self.mid = movie_id
+        self.tid = title
 
-class Rating(User):
-    def __init__(self, rating, movieid, uid):
-        self.rating = rating
-        self.movieid = movieid
-        self.userid = uid
+class Rating:
+    def __init__(self, star, movie_id, user_id):
+        self.sid = star
+        self.mid = movie_id
+        self.uid = user_id

@@ -1,29 +1,24 @@
 # test script - What to Watch
-import unittest
+#import unittest
 from movie_lib import *
 
-'''
-test data:
-     A dictionary for ratings by movie.
-'''
-# uid dictionary: {key = uid: value: useridmovieid}
-udict = {11:User(400), 22:User(410), 33:User(440)}
-# uid dictionary: {key = uid: value: movieid}
-# uid_dict = {11:[400 ,404 ,410], 22:[400, 410 ,440], 33:[440, 404 ,410]}
-# # movieid = [400, 440, 404, 410]
-# # movie matrix:     uid  movieid rating
-# movie_rate_matrix = [[11, 400, 5],
-#                      [11, 404, 3],
-#                      [11, 410, 2],
-#                      [22, 400, 6],
-#                      [22, 410, 7],
-#                      [22, 440, 5],
-#                      [33, 440, 1],
-#                      [33, 404, 2],
-#                      [33, 410, 1],
-#                      ]
-uid = 11
-class testUser(self, uid):
-    self.assertTrue(udict[uid].userid, 400) # should be True
-    # self.assertTrue(self.userid(33) == [1, 2, 2])  # should be True
-    # self.assertFalse(self.userid(33) == [6, 7, 5]) # should be False
+
+def test_user_creation():
+    user1 = User(5)
+    assert user1.uid == 5
+
+def test_movie_creation():
+    movie1 = Movie(23, 'The Matrix')
+    assert movie1.mid == 23
+    assert movie1.tid == 'The Matrix'
+
+def test_rating_creation():
+
+
+
+
+
+# def test_movie_creation():
+#     movie1 = Movie(3, 'Toy Story')
+#     assert movie1.mid == 3
+#     assert movie1.mid == 'Toy Story'
