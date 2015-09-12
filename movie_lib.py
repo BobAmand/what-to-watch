@@ -11,7 +11,7 @@ class Movie:
         self.tid = title
 
 class Rating:
-    def __init__(self, star, movie_id, user_id):
-        self.sid = star
-        self.mid = movie_id
+    def __init__(self, user_id, movie_id, star):
         self.uid = user_id
+        self.mid = movie_id
+        self.sid = star
