@@ -5,7 +5,7 @@ from movie_lib import *
 user1 = User(123)     #note User(), refers to class User object.
 user2 = User(456)
 user3 = User(99)
-user4 = User(0)
+user4 = User('A')
 movie1 = Movie(23, 'The Matrix')    #Two parameterss
 movie2 = Movie(45, 'Toy Story')
 rating1 = Rating(123, 23, 3)        #Three parameters
@@ -26,7 +26,7 @@ def test_user_creation():
     assert user1.uid == 123
     assert user2.uid == 456
     assert user3.uid == 99
-    assert user4.uid == 0
+    assert user4.uid == 'A'
 
 def test_movie_creation(): # takes 2 parameters: movie_id, title
     assert movie1.mid == 23
@@ -56,3 +56,8 @@ def test_find_ratings_for_movie():
     print(len(toy_story_ratings))
     print(toy_story_ratings)
     assert len(toy_story_ratings) == 2   #Two users rated movieToystory
+
+def test_find_ratings_by_user():
+    print(len(all_users))
+    print(all_users)
+    assert len(all_users) == 4
