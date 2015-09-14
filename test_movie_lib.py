@@ -14,10 +14,8 @@ rating3 = Rating(user1.uid, movie2.mid, 1)
 rating4 = Rating(user2.uid, movie2.mid, 5)
 
 print(all_movies)   # passes all movies into dictionary
-
 print(all_movies[45])   # passes one movie into the dictionary
 print(all_movies[23])
-
 print(id(movie2))   #'the id() function reveals memory location'
 print(id(all_movies[45]))  # passes in all_movies[self.mid]
                     # The above will show the same memory location!
@@ -58,6 +56,7 @@ def test_find_ratings_for_movie():
     assert len(toy_story_ratings) == 2   #Two users rated movieToystory
 
 def test_find_ratings_by_user():
+    user_one = all_ratings[user1.].get_ratings()
     print(len(all_users))
     print(all_users)
-    assert len(all_users) == 4
+    assert len(all_users) == 4  # Four total users id in test data
