@@ -87,6 +87,3 @@ class Rating:
 
     def __repr__(self):
         return self.__str__()
-
-# def all_ratings_by_movie_by_id(all_movies):
-#     for i in all_movies:
