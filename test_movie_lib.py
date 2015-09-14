@@ -55,8 +55,14 @@ def test_find_ratings_for_movie():
     print(toy_story_ratings)
     assert len(toy_story_ratings) == 2   #Two users rated movieToystory
 
-def test_find_ratings_by_user():
-    user_one = all_ratings[user1.].get_ratings()
+def test_find_user():
+    user_one = all_users[user1.uid].get_ratings()
     print(len(all_users))
     print(all_users)
     assert len(all_users) == 4  # Four total users id in test data
+
+def test_find_ratings_by_user():
+    user_one_ratings = all_users[user1.uid].get_ratings()
+    print(len(user_one_ratings))
+    print(user_one_ratings)
+    assert len(user_one_ratings) == 1
