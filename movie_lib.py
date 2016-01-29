@@ -1,7 +1,44 @@
 import csv
+'''
+with help from Andrew Pierce.
+note the read of u.item for movie data.
+'''
+with open("ml-100k/u.item", encoding='latin_1') as f:
+    all_movies = {}
+    reader1 = csv.reader(f, delimiter='|')
+    for row in reader1:
+        key = int(row[0])
+        all_movies[key] = row[1]
 
-all_movies = {}
-all_users = {}
+'''
+note the next read is of u.data for the ratings.
+'''
+with open("ml-100k/u.data", encoding='latin_1') as f:
+    all_ratings = {}
+    reader1 = csv.reader(f, delimiter='\t')
+    for row in reader1:
+        key = int(row[1])
+        if key not in all_ratings:
+            all_ratings[key] = list(row[2])
+        else:
+            all_ratings[key].append(row[2])
+    all_ratings = {k:[int(x) for x in values] for k,values in all_ratings.items()}
+
+'''
+note the next read is of u.data for the user.
+the file u.user is not needed at this point.
+'''
+with open("ml-100k/u.data", encoding='latin_1') as f:
+    all_users = {}
+    reader1 = csv.reader(f, delimiter='\t')
+    for row in reader1:
+        if key not in all_users:
+            all_users[key] = {int(row[1]): int(row[2])}
+        else:
+            all_users[key].update({int(row[1]): int(row[2])})
+
+
+
 
 class User:
     def __init__(self, user_id):
