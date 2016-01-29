@@ -1,8 +1,4 @@
-# MOVIE RATING EXERCISE:
-# ---
-  The three data files (u.data, u.item, u.user) are on
-  the same directory as the repository.  They have not been pushed to GitHub
-  # What to Watch
+  # What to Watch   - Bob Amand, The Iron Yard, Cohort 5
 
   ## Description
 
