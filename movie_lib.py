@@ -87,3 +87,6 @@ class Rating:
 
     def __repr__(self):
         return self.__str__()
+
+def rating_for_movie():
+    movie1 = input("What movie would you like to see ratings?: ")
