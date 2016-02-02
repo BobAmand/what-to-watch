@@ -8,7 +8,7 @@ with open("ml-100k/u.item", encoding='latin_1') as f:
     reader1 = csv.reader(f, delimiter='|')
     for row in reader1:
         key = int(row[0])
-        all_movies[key] = row[1]
+        all_movies[key] = row[1]  # assigns title to each key in first column.
 
 '''
 note the next read is of u.data for the ratings.
