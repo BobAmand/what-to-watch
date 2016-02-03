@@ -1,5 +1,5 @@
 # test script - What to Watch
-# import unittest
+import unittest
 from movie_lib import *
 
 user1 = User(123)     #note User(), refers to class User object.
