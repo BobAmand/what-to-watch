@@ -13,10 +13,10 @@ def top_50():
             avg = sum(value)/len(value)
             popularity[key] = round(avg, 2)  # 2 decimals in average
             sorted_list = sorted(popularity.items(), key=lambda c: c[1], reverse=True)
-            top_50 = sorted_list[:50]
+            top_50a = sorted_list[:50]
             counter = 0
-    for x in top_50:
-        print(str(counter+1) + ': ' + str(all_movies[top_50[counter][0]]) + ' ' + str(top_50[counter][1]))
+    for x in top_50a:
+        print(str(counter+1) + ': ' + str(all_movies[top_50a[counter][0]]) + ' ' + str(top_50a[counter][1]))
         counter += 1
 
 

@@ -32,6 +32,7 @@ with open("ml-100k/u.data", encoding='latin_1') as f:
     all_users = {}
     reader1 = csv.reader(f, delimiter='\t')
     for row in reader1:
+        key = int(row[0])
         if key not in all_users:
             all_users[key] = {int(row[1]): int(row[2])}
         else:
